@@ -1,0 +1,53 @@
+// variabili
+// colori
+$primary_1: #076BB5;
+$primary_2: #82B5DD;
+$primary_3: #E56764;
+// mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// fine variabili
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  color: white;
+  text-transform: uppercase;
+  height: 100vh;
+}
+
+header {
+  height: 80px;
+  background-color: $primary_3;
+  @include flex-center;
+}
+
+main {
+  display: flex;
+  height: calc(100% - 160px);
+  aside {
+    flex-basis: 20%;
+    background-color: $primary_2;
+    @include flex-center;
+  }
+  section {
+    flex-basis: 60%;
+    background-color: $primary_1;
+    @include flex-center;
+  }
+}
+
+footer {
+  height: 80px;
+  background-color: $primary_3;
+  @include flex-center;
+}
